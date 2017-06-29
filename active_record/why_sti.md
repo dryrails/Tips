@@ -6,12 +6,11 @@ class Order < ApplicationRecord
   # attr :number 订单都有一个订单编号
   
   before_create do 
-	self.number = init_number
+    self.number = init_number
   end
   
   protected
   def build_number_suffix
-    
   end
 end
 
@@ -30,7 +29,6 @@ class SalesOrder < Order
   end
   
   def notice_sales_warehouse # 通知销售仓库发货
- 
   end
   
   def init_number
@@ -45,7 +43,6 @@ class PurchaseOrder < Order
   protected
   
   def decrease_property 	 # 减少公司账面财产
-  
   end
   
   def notice_purchase_warehouse # 通知采购仓库跟踪货物物流
@@ -55,4 +52,4 @@ class PurchaseOrder < Order
     'PO' << build_number_suffix
   end
 end
-```
+``` 
